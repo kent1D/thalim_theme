@@ -1,0 +1,232 @@
+/* feuille vide pour surcharge */
+@import "css/variables.less";
+@import "css/spip.variables.less";
+@import "css/mixins.less";
+@import "css/wells.less";
+@import "css/layoutgala/33";
+@import "css/layoutgala/10";
+
+#layoutgala33 > .core(8,4,4,@gridColumnWidth,@gridGutterWidth);
+
+.article_seminaire,.article_evenement {
+  #layoutgala10 > .core(7,3,2,@gridColumnWidth,@gridGutterWidth);
+}
+.maincontainer{
+  background:@white url(img/bandeau_nb.png) no-repeat 0 0;
+  padding:174px 10px 10px;
+}
+.ie8 .maincontainer{
+  background-position:0 -15px;
+}
+.main {}
+.container .header{
+  height:130px;
+}
+
+.container .header .spip_logos{
+  position:absolute;
+  float:none;
+  margin:70px 0 0 0;
+}
+
+.accueil .span4{
+  max-height:100px;
+}
+#aside .well{
+  border:none;
+  background:transparent url(img/background_well.png) 25px 0 no-repeat;
+  box-shadow:none;
+  padding-top:65px;
+}
+
+#aside a{
+  color:@gray;
+}
+.page .liste-items .item {
+  border-top: 1px solid @grayLighter}
+  
+.page .liste-items .item:last-child {border-bottom: 1px solid @grayLighter;}
+
+.formulaire_spip,legend, label,.footer{
+  color:@white;
+}
+
+.thesaurus{
+  text-align:justify;
+  margin-bottom:2em;
+}
+
+.thesaurus a{
+  color:@grayLight;
+}
+
+.thesaurus a:hover{
+  background-color:transparent;
+}
+
+#aside{
+  margin-top:-120px;
+}
+.aside .menu-conteneur.nav > ul > li > a,.menu-conteneur.nav > ul > li > span{
+  font-weight:bold;
+  font-size:1.2em;
+  margin-bottom:.5em;
+  display:block;
+  background:transparent url(img/puce_menu_1.jpg) top left no-repeat;
+  padding-left:15px; 
+}
+
+.aside .nav-list li > a:hover {
+  background-color:transparent;
+  color:@gray;
+}
+.menu-conteneur.nav > ul li{
+  margin-bottom:.5em;
+}
+.well{border:none;}
+.aside .menu-conteneur.nav li{border:none; padding:0}
+
+.aside .well > .nav > li{
+  border-left:2px solid @black;
+  margin:3px 0;
+  padding-left:15px;
+  
+}
+.aside .menu-conteneur.nav > ul > li li{
+  padding-left:20px;
+}
+.menu-conteneur.nav ul ul.nav{
+  margin-bottom:0;
+  padding-left:.5em;
+}
+
+.header .formulaire_menu_lang{
+  width:60%;
+  float:left;
+  margin-top:.5em;
+  background:#fff;
+}
+
+.header .formulaire_menu_lang select,.header .form-search .input-append .search-query{
+  background-color:transparent;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  color:@black;
+  margin-bottom:0;
+  border:none;
+}
+
+.header .form-search .input-append .search-query{
+  height: 24px;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+  border-top:1px solid #000;
+}
+.form-search .input-append .btn{
+  -webkit-border-radius:14px;
+  -moz-border-radius:14px;
+  border-radius:14px;
+  margin-left:3px;
+  padding:2px 3px;
+  vertical-align:middle;
+}
+.header .formulaire_recherche{
+  width:50%;
+  float:right;
+  margin:1em 40px 0 0;
+  background:#fff;
+  padding-right:0;
+}
+
+.header .formulaire_menu_lang label, .header .formulaire_recherche label{ color:@black;margin:.5em;}
+.footer{
+  border:none;
+  margin-top:0em;
+}
+
+.nav ul{
+ list-style-type:none;
+ margin-left:0;
+}
+.nav-list > .active > a, .nav-list > .active > a:hover, .nav-list > .active > a:focus{
+  background:transparent;
+  font-weight:bold;
+}
+@media (min-width: 1200px) {
+  #layoutgala33 > .core(8,4,4,@gridColumnWidth1200,@gridGutterWidth1200);
+  .article_seminaire,.article_evenement {
+    #layoutgala10 > .core(5,3,3,@gridColumnWidth1200,@gridGutterWidth1200);
+  }
+  .maincontainer{
+    background:@white url(img/bandeau_nb.png) no-repeat 0 0;
+    padding:174px 15px 15px;
+  }
+  
+  .ie8 .maincontainer{
+    background-position:0 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  #layoutgala33 > .core(8,4,4,@gridColumnWidth768,@gridGutterWidth768);
+  .article_seminaire,.article_evenement {
+    #layoutgala10 > .core(7,3,2,@gridColumnWidth768,@gridGutterWidth768);
+  }
+  .container .header .spip_logos{
+    max-width:250px;
+  }
+  .maincontainer{
+    margin-top:-40px;
+  }
+  #aside{
+    margin-top:-100px;
+  }
+}
+
+@media (min-width: 451px) and (max-width: 767px) {
+
+  .accueil{
+    margin-top:100px;
+  }
+  header>.span4{
+    width:50%;
+    float:left;
+  }
+  .header > .row > .span4{
+    width:100%;
+    margin:0;
+    position:absolute;
+    top:0;
+    overflow:auto;
+  }
+  .header > .row > .span4 .formulaire_spip{
+    width:40%;
+    clear:none;
+    margin-top:10px;
+    padding-top:0;
+   }
+   .maincontainer{
+     margin-top:100px;
+   }
+   div#aside{
+     width:100%;
+     margin-top:0;
+   }
+}
+@media (max-width: 450px) {
+  div#content,div#aside,div#extra{float:none;width:100%;margin:0px;clear:both;}
+  .container .header .spip_logos,#logo_site_spip{
+    position:relative;
+    float:right;
+    margin:10px;
+  }
+  .article_seminaire,.article_evenement {
+    div#content,div#aside,div#extra{float:none;width:100%;margin:0px;clear:both;}
+  }
+  header>.span4{
+    width:100px;
+    float:left;
+  }
+}

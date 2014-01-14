@@ -1,0 +1,12 @@
+<plugin>
+	<nom>Thalim</nom>
+	<version>0.0.1</version>
+	<etat>stable</etat>
+	<auteur>kent1</auteur>
+	<licence>GPL</licence>
+	<prefix>theme_thalim</prefix>
+	<description>Thalim</description>
+	<icon>vignette.png</icon>
+	<utilise id="spipr" version="[0.1.0-dev;]" />
+	<categorie>theme</categorie>
+</plugin>
