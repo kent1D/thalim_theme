@@ -37,6 +37,7 @@
   background:transparent url(img/background_well.png) 25px 0 no-repeat;
   box-shadow:none;
   padding-top:65px;
+  min-height:440px;
 }
 
 #aside a{
@@ -104,15 +105,9 @@
   width:60%;
   float:left;
   margin-top:.5em;
-  background:#fff;
 }
 
 .header .formulaire_menu_lang select,.header .form-search .input-append .search-query{
-  background-color:transparent;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  border-radius: 0px;
-  color:@black;
   margin-bottom:0;
   border:none;
 }
@@ -122,7 +117,6 @@
   -webkit-box-sizing:border-box;
   -moz-box-sizing:border-box;
   box-sizing:border-box;
-  border-top:1px solid #000;
 }
 .form-search .input-append .btn{
   -webkit-border-radius:14px;
@@ -131,21 +125,44 @@
   margin-left:3px;
   padding:2px 3px;
   vertical-align:middle;
+  position:absolute;
+  bottom:0;
+  right:0;
+  color:@black;
+  background-color:@grayLight;
+  background-image:none;
+  z-index:10000;
 }
 .header .formulaire_recherche{
   width:50%;
   float:right;
   margin:1em 40px 0 0;
-  background:#fff;
   padding-right:0;
 }
 
-.header .formulaire_menu_lang label, .header .formulaire_recherche label{ color:@black;margin:.5em;}
+.header .formulaire_menu_lang label, .header .formulaire_recherche label{color:@gray;margin:.5em;}
 .footer{
   border:none;
   margin-top:0em;
 }
 
+.header .form-search .input-append .search-query,
+.header select{
+  background: #ffffff; /* Old browsers */
+  background: -moz-linear-gradient(left, @grayLighter 0%, @grayDark 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,@grayLighter), color-stop(100%,@grayDark)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, @grayLighter 0%,@grayDark 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, @grayLighter 0%,@grayDark 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, @grayLighter 0%,@grayDark 100%); /* IE10+ */
+  background: linear-gradient(to right,@grayLighterf 0%,@grayDark 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@grayLighter', endColorstr='@grayDark',GradientType=1 ); /* IE6-9 */
+  color:@black;
+  border:0px;
+  -webkit-border-radius : 10px;
+  -moz-border-radius : 10px;
+  border-radius : 10px;
+  
+}
 .nav ul{
  list-style-type:none;
  margin-left:0;
@@ -153,6 +170,14 @@
 .nav-list > .active > a, .nav-list > .active > a:hover, .nav-list > .active > a:focus{
   background:transparent;
   font-weight:bold;
+}
+
+.liste .h2{
+  margin-bottom:.5em;
+}
+
+.pagination ul > .active > span{
+  color:@grayDarker;
 }
 @media (min-width: 1200px) {
   #layoutgala33 > .core(8,4,4,@gridColumnWidth1200,@gridGutterWidth1200);
