@@ -4,12 +4,14 @@
 @import "css/mixins.less";
 @import "css/wells.less";
 @import "css/layoutgala/33";
+@import "css/layoutgala/35";
 @import "css/layoutgala/10";
+@import "css/layoutgala/40";
 
 #layoutgala33 > .core(8,4,4,@gridColumnWidth,@gridGutterWidth);
 
 .article_seminaire,.article_evenement {
-  #layoutgala10 > .core(7,3,2,@gridColumnWidth,@gridGutterWidth);
+    #layoutgala10 > .core(5,3,3,@gridColumnWidth,@gridGutterWidth);
 }
 .maincontainer{
   background:@white url(img/bandeau_nb.png) no-repeat 0 0;
@@ -176,8 +178,16 @@
   margin-bottom:.5em;
 }
 
+.secondary .liste-items .entry-content{
+  max-height:initial;
+}
 .pagination ul > .active > span{
   color:@grayDarker;
+}
+
+.pagination ul > li > a, .pagination ul > li > span{
+  line-height:15px;
+  padding:2px 8px;
 }
 @media (min-width: 1200px) {
   #layoutgala33 > .core(8,4,4,@gridColumnWidth1200,@gridGutterWidth1200);
@@ -197,7 +207,7 @@
 @media (min-width: 768px) and (max-width: 979px) {
   #layoutgala33 > .core(8,4,4,@gridColumnWidth768,@gridGutterWidth768);
   .article_seminaire,.article_evenement {
-    #layoutgala10 > .core(7,3,2,@gridColumnWidth768,@gridGutterWidth768);
+    #layoutgala35 > .core(8,4,8,@gridColumnWidth768,@gridGutterWidth768);
   }
   .container .header .spip_logos{
     max-width:250px;
@@ -210,8 +220,17 @@
   }
 }
 
-@media (min-width: 451px) and (max-width: 767px) {
-
+@media (max-width: 767px) {
+  #layoutgala40 > .core(6,4,4,@gridColumnWidth768,@gridGutterWidth768);
+  .article_seminaire,.article_evenement {
+    #layoutgala40 > .core(6,4,4,@gridColumnWidth768,@gridGutterWidth768);
+  }
+  .article_seminaire,.article_evenement {
+    div#content{
+      width:100%;
+    }
+    div#aside,div#extra{width:48%;margin:0px;}
+  }
   .accueil{
     margin-top:100px;
   }
@@ -235,13 +254,17 @@
    .maincontainer{
      margin-top:100px;
    }
-   div#aside{
-     width:100%;
-     margin-top:0;
-   }
 }
 @media (max-width: 450px) {
-  div#content,div#aside,div#extra{float:none;width:100%;margin:0px;clear:both;}
+  #layoutgala40 > .core(6,4,4,@gridColumnWidth768,@gridGutterWidth768);
+  .article_seminaire,.article_evenement {
+    #layoutgala40 > .core(6,4,4,@gridColumnWidth768,@gridGutterWidth768);
+  }
+  
+  .article_seminaire div#aside,.article_evenement div#aside{
+    display:none;
+  }
+  div#content,div#aside,div#extra{width:100%;margin:0px;}
   .container .header .spip_logos,#logo_site_spip{
     position:relative;
     float:right;
