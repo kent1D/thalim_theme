@@ -1,0 +1,11 @@
+/* Tekton-pro */
+@font-face {
+    font-family: 'tekton_proregular';
+    src: url('fonts/tektonpro-regular-webfont.eot');
+    src: url('fonts/tektonpro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/tektonpro-regular-webfont.woff') format('woff'),
+         url('fonts/tektonpro-regular-webfont.ttf') format('truetype'),
+         url('fonts/tektonpro-regular-webfont.svg#tekton_proregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

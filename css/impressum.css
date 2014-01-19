@@ -1,0 +1,11 @@
+/* Impressum */
+@font-face {
+    font-family: 'impressum';
+    src: url('fonts/impressum_lt_roman-webfont.eot');
+    src: url('fonts/impressum_lt_roman-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/impressum_lt_roman-webfont.woff') format('woff'),
+         url('fonts/impressum_lt_roman-webfont.ttf') format('truetype'),
+         url('fonts/impressum_lt_roman-webfont.svg#impressum_ltregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
