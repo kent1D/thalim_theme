@@ -2,6 +2,7 @@
 @import "css/variables.less";
 @import "css/spip.variables.less";
 @import "css/mixins.less";
+@import "bootstrap/css/forms.less";
 @import "css/wells.less";
 @import "css/layoutgala/33";
 @import "css/layoutgala/35";
@@ -10,6 +11,77 @@
 
 #layoutgala33 > .core(8,4,4,@gridColumnWidth,@gridGutterWidth);
 
+strong,h4{
+  font-family:'century_gothicbold';
+  font-weight:normal;
+}
+
+h2, .h2{
+  font-size:1.7em;
+}
+
+h1.ellipse,h2.ellipse,h3.ellipse{
+  position:relative;
+  margin-bottom:1.8em;
+}
+
+h1 .ovale,h2 .ovale,h3 .ovale{
+  width:200px;
+  height:30px;
+  border:1px solid #ccc;
+  position:absolute;
+  border-radius:100px/15px;
+  -moz-border-radius:100px/15px;
+  transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg); /* IE 9 */
+  -webkit-transform: rotate(-3deg); /* Safari and Chrome */
+  left:0;
+  bottom:-10px;
+  z-index:10;
+}
+
+h1.ellipse span.titre,h2.ellipse span.titre, h3.ellipse span.titre{
+  z-index:20;
+  display:block;
+  width:100%;
+  max-width:200px;
+  text-align:center;
+}
+.chapo {
+  font-weight:normal;
+  font-size:1.2em;
+  text-align:justify;
+}
+
+.wrapper a,.extra a{
+  color:@black;
+  background: @bodyBackground; /* Chrome,Safari4+ */ /* Chrome10+,Safari5.1+ */ /* Opera 11.10+ */ /* IE10+ */
+  background: -webkit-linear-gradient(to right, #ffffff 0%, #ffffff 2%, @bodyBackground 50%, #ffffff 100%);
+  background: -moz-linear-gradient(to right, #ffffff 0%, #ffffff 2%, @bodyBackground 50%, #ffffff 100%);
+  background: -o-linear-gradient(to right, #ffffff 0%, #ffffff 2%, @bodyBackground 50%, #ffffff 100%);
+  background: -webkit-gradient(linear, 100% 0, 0 0, from(#ffffff), color-stop(0.02, #ffffff), color-stop(0.50, @bodyBackground), to(#ffffff));
+  background: linear-gradient(to right, #ffffff 0%, #ffffff 2%, @bodyBackground 50%, #ffffff 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+}
+
+.wrapper .well a,.extra .well a{
+  background: @bodyBackground; /* Chrome,Safari4+ */ /* Chrome10+,Safari5.1+ */ /* Opera 11.10+ */ /* IE10+ */
+  background: -webkit-linear-gradient(to right, #eeeeee 0%, #eeeeee 2%, @bodyBackground 50%, #eeeeee 100%);
+  background: -moz-linear-gradient(to right, #eeeeee 0%, #eeeeee 2%, @bodyBackground 50%, #eeeeee 100%);
+  background: -o-linear-gradient(to right, #eeeeee 0%, #eeeeee 2%, @bodyBackground 50%, #eeeeee 100%);
+  background: -webkit-gradient(linear, 100% 0, 0 0, from(#eeeeee), color-stop(0.02, #eeeeee), color-stop(0.50, @bodyBackground), to(#eeeeee));
+  background: linear-gradient(to right, #eeeeee 0%, #eeeeee 2%, @bodyBackground 50%, #eeeeee 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#eeeeee',GradientType=1 ); /* IE6-9 */
+}
+
+.main .pagination a, .markItUp .markItUpHeader a, .markItUp .markItUpTabs a, .markItUp .markItUpFooter a,
+.formulaire_spip a{
+  background:initial;
+  filter:none;
+}
+#extra{
+  padding:0 2em;
+}
 .article_seminaire,.article_evenement {
     #layoutgala10 > .core(5,3,3,@gridColumnWidth,@gridGutterWidth);
 }
@@ -20,7 +92,6 @@
 .ie8 .maincontainer{
   background-position:0 -15px;
 }
-.main {}
 .container .header{
   height:130px;
 }
@@ -34,6 +105,18 @@
 .accueil .span4{
   max-height:100px;
 }
+
+#descriptif_site_spip{
+  margin-top:4em;
+  margin-bottom:2em;
+  font-size:1.4em;
+  text-align:justify;
+}
+
+.axes_transversaux{
+  margin-bottom:2em;
+}
+
 #aside .well{
   border:none;
   background:transparent url(img/background_well.png) 25px 0 no-repeat;
@@ -46,39 +129,110 @@
   color:@gray;
 }
 .page .liste-items .item {
-  border-top: 1px solid @grayLighter}
-  
-.page .liste-items .item:last-child {border-bottom: 1px solid @grayLighter;}
+  border-top: 1px solid @grayLighter
+}
+.page .liste-items .item:last-child {border-bottom: none;}
 
-.formulaire_spip,legend, label,.footer{
-  color:@white;
+.liste-actualites{
+  list-style-type:disc;
+  margin-left:0px;
+}
+
+.page .liste-items.liste-puce {
+  list-style-type: disc;
+  margin-left: 15px;
+}
+.page .liste-items.liste-puce .item{
+  border:none;
+  overflow:visible;
+}
+
+.liste-items.evenements .item.fini .entry-title a{
+  color:#000;
+}
+button{.btn}
+
+.formulaire_spip,.footer{
+  color:@black;
+}
+
+.formulaire_spip{
+  legend,label{
+    color:@white;
+  }
+  .explication{
+    color:@gray;
+  }
+  ul{
+    list-style-type:none;
+    margin-left:0;
+  }
+  li{
+    margin-left:0;
+  }
+  .formulaire_crayon{
+    h3{
+      color:@white;
+    }
+    li.fieldset{background:@black;}
+  }
+}
+// Everything else
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  &:focus {
+    border-color: rgba(244,233,79,.8);
+    .box-shadow(~"inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(244,233,79,.6)");
+  }
 }
 
 .thesaurus{
   text-align:justify;
   margin-bottom:2em;
-}
-
-.thesaurus a{
-  color:@grayLight;
-}
-
-.thesaurus a:hover{
-  background-color:transparent;
+  a{
+    color:@black;
+  }
+  a:hover{
+    background-color:transparent;
+  }
 }
 
 #aside{
   margin-top:-120px;
 }
+
 .aside .menu-conteneur.nav > ul > li > a,.menu-conteneur.nav > ul > li > span{
-  font-weight:bold;
-  font-size:1.2em;
-  margin-bottom:.5em;
+  strong;
+  font-size:1.3em;
+  line-height:1.4em;
+  margin-bottom:.3em;
+  color:@black;
   display:block;
   background:transparent url(img/puce_menu_1.jpg) top left no-repeat;
   padding-left:15px; 
 }
 
+.aside .menu-conteneur.nav > ul > li > ul > li > a,.menu-conteneur.nav > ul > li > ul > li > span{
+  font-family:'century_gothicregular';
+  color:@black;
+  font-size:1.3em;
+  line-height:1.2em;
+  margin-bottom:.2em;
+}
 .aside .nav-list li > a:hover {
   background-color:transparent;
   color:@gray;
@@ -88,7 +242,6 @@
 }
 .well{border:none;}
 .aside .menu-conteneur.nav li{border:none; padding:0}
-
 .aside .well > .nav > li{
   border-left:2px solid @black;
   margin:3px 0;
@@ -103,82 +256,82 @@
   padding-left:.5em;
 }
 
-.header .formulaire_menu_lang{
-  width:60%;
-  float:left;
-  margin-top:.5em;
+.header{
+  .formulaire_menu_lang{
+    width:60%;
+    float:left;
+    margin-top:.5em;
+  }
+  .formulaire_recherche{
+    width:50%;
+    float:right;
+    margin:1em 40px 0 0;
+    padding-right:0;
+  }
+  .formulaire_menu_lang select,.form-search .input-append .search-query{
+    margin-bottom:0;
+    border:none;
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(left, @white 0%, @bodyBackground 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,@white), color-stop(100%,@bodyBackground)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, @white 0%,@bodyBackground 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, @white 0%,@bodyBackground 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, @white 0%,@bodyBackground 100%); /* IE10+ */
+    background: linear-gradient(to right,@white 0%,@bodyBackground 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@white', endColorstr='@bodyBackground',GradientType=1 ); /* IE6-9 */
+    color:@black;
+    -webkit-border-radius : 10px;
+    -moz-border-radius : 10px;
+    border-radius : 10px;
+  }
+  .search-query{
+    height: 24px;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+  }
+  label{color:@gray;margin:.5em;}
+  .form-search .btn{
+    -webkit-border-radius:14px;
+    -moz-border-radius:14px;
+    border-radius:14px;
+    margin-left:3px;
+    padding:2px 3px;
+    vertical-align:middle;
+    position:absolute;
+    bottom:0;
+    right:0;
+    color:@black;
+    background-color:@bodyBackground;
+    background-image:none;
+    z-index:10000;
+  }
 }
 
-.header .formulaire_menu_lang select,.header .form-search .input-append .search-query{
-  margin-bottom:0;
-  border:none;
-}
-
-.header .form-search .input-append .search-query{
-  height: 24px;
-  -webkit-box-sizing:border-box;
-  -moz-box-sizing:border-box;
-  box-sizing:border-box;
-}
-.form-search .input-append .btn{
-  -webkit-border-radius:14px;
-  -moz-border-radius:14px;
-  border-radius:14px;
-  margin-left:3px;
-  padding:2px 3px;
-  vertical-align:middle;
-  position:absolute;
-  bottom:0;
-  right:0;
-  color:@black;
-  background-color:@grayLight;
-  background-image:none;
-  z-index:10000;
-}
-.header .formulaire_recherche{
-  width:50%;
-  float:right;
-  margin:1em 40px 0 0;
-  padding-right:0;
-}
-
-.header .formulaire_menu_lang label, .header .formulaire_recherche label{color:@gray;margin:.5em;}
 .footer{
   border:none;
   margin-top:0em;
 }
 
-.header .form-search .input-append .search-query,
-.header select{
-  background: #ffffff; /* Old browsers */
-  background: -moz-linear-gradient(left, @grayLighter 0%, @grayDark 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%,@grayLighter), color-stop(100%,@grayDark)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(left, @grayLighter 0%,@grayDark 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(left, @grayLighter 0%,@grayDark 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(left, @grayLighter 0%,@grayDark 100%); /* IE10+ */
-  background: linear-gradient(to right,@grayLighterf 0%,@grayDark 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@grayLighter', endColorstr='@grayDark',GradientType=1 ); /* IE6-9 */
-  color:@black;
-  border:0px;
-  -webkit-border-radius : 10px;
-  -moz-border-radius : 10px;
-  border-radius : 10px;
-  
-}
 .nav ul{
  list-style-type:none;
  margin-left:0;
 }
+
 .nav-list > .active > a, .nav-list > .active > a:hover, .nav-list > .active > a:focus{
   background:transparent;
-  font-weight:bold;
+  strong
 }
 
+.on{
+  font-weight:normal;
+  strong;
+}
 .liste .h2{
   margin-bottom:.5em;
 }
 
-.secondary .liste-items .entry-content{
+.secondary .liste-items .entry-content,.liste-items.evenements .item.fini .entry-content{
   max-height:initial;
 }
 .pagination ul > .active > span{
@@ -186,9 +339,17 @@
 }
 
 .pagination ul > li > a, .pagination ul > li > span{
-  line-height:15px;
-  padding:2px 8px;
+  line-height:20px;
+  padding:0px 7px;
+  font-size:inherit;
 }
+
+.fonctions{
+  margin-bottom:2em;
+  padding-bottom:.5em;
+  border-bottom:1px solid @gray;
+}
+
 @media (min-width: 1200px) {
   #layoutgala33 > .core(8,4,4,@gridColumnWidth1200,@gridGutterWidth1200);
   .article_seminaire,.article_evenement {
