@@ -12,18 +12,23 @@
 #layoutgala33 > .core(8,4,4,@gridColumnWidth,@gridGutterWidth);
 
 strong,h4{
-  font-family:'century_gothicbold';
-  font-weight:normal;
+  font-weight:bold;
 }
 
 h2, .h2{
   font-size:1.7em;
 }
 
+.page_article h1{
+  margin-bottom:1.8em;
+  line-height:1.1em;
+  border-bottom:1px solid #ccc;
+}
 h1.ellipse,h2.ellipse,h3.ellipse{
   position:relative;
   margin-bottom:1.8em;
   line-height:1.1em;
+  padding-bottom:.5em;
 }
 
 h1 .ovale,h2 .ovale,h3 .ovale{
@@ -96,6 +101,10 @@ h1.ellipse span.titre,h2.ellipse span.titre, h3.ellipse span.titre{
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#eeeeee',GradientType=1 ); /* IE6-9 */
 }
 
+.wrapper .actualites .span2 a{
+  background:none;
+  filter:none;
+}
 .main .pagination a, .markItUp .markItUpHeader a, .markItUp .markItUpTabs a, .markItUp .markItUpFooter a,
 .formulaire_spip a,a.lien_document,.main .pagination a:hover, .markItUp .markItUpHeader a:hover, .markItUp .markItUpTabs a, .markItUp .markItUpFooter a:hover,
 .formulaire_spip a:hover,a.lien_document:hover{
@@ -112,6 +121,9 @@ a.lien_document,a.lien_document:hover{
 }
 .article_seminaire,.article_evenement {
     #layoutgala10 > .core(5,3,3,@gridColumnWidth,@gridGutterWidth);
+}
+.evenement article{
+  margin-bottom:0;
 }
 .maincontainer{
   background:@white url(img/bandeau_nb.png) no-repeat 0 0;
@@ -145,6 +157,76 @@ a.lien_document,a.lien_document:hover{
   margin-bottom:2em;
 }
 
+.axes_transversaux .col2,.axes_transversaux .col1{
+  margin-left:0;
+}
+
+.axes_transversaux .col1 h2.ellipse{
+  float:right;
+}
+
+.auteurs_vignette{
+  padding-left:30px;
+}
+
+.auteurs_vignette .membre,.affiche{
+  position:relative;
+  width:198px;
+  margin-bottom:30px;
+}
+
+.affiche{
+  margin:0 auto 30px auto
+}
+
+.main .affiche{float:left; margin:.2em 1em .2em 0;}
+.auteurs_vignette .ovale,.affiche .ovale{
+  width:260px;
+  height:46px;
+  border:1px solid #ccc;
+  position:absolute;
+  border-radius:130px/23px;
+  -moz-border-radius:130px/23px;
+  transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg); /* IE 9 */
+  -webkit-transform: rotate(-3deg); /* Safari and Chrome */
+  left:0;
+  bottom:-18px;
+  z-index:0;
+  left:-30px;
+}
+.auteurs_vignette .membre a,.affiche a{
+  background:none;
+  filter:none;
+  display:block;
+  position:relative;
+  color:#fff;
+  -webkit-box-shadow:0px 0px 5px 3px #ccc;
+  -moz-box-shadow:0px 0px 5px 3px #ccc;
+  box-shadow:0px 0px 5px 3px #ccc;
+}
+.auteurs_vignette .membre a img,.affiche a img{
+  width:100%;
+  height:auto;
+}
+.auteurs_vignette .membre a:hover,.affiche a:hover{
+  color:#fff99e;
+  -webkit-box-shadow:0px 0px 5px 3px #fff99e;
+  -moz-box-shadow:0px 0px 5px 3px #fff99e;
+  box-shadow:0px 0px 5px 3px #fff99e;
+}
+.auteurs_vignette .nom{
+  display:block;
+  background:@black;
+  position:absolute;
+  bottom:0;
+  padding:.5em;
+  width:198px;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+  text-align:center;
+}
+
 #aside .well{
   border:none;
   background:transparent url(img/background_well.png) 25px 0 no-repeat;
@@ -157,7 +239,8 @@ a.lien_document,a.lien_document:hover{
   color:@gray;
 }
 .page .liste-items .item {
-  border-top: 1px solid @grayLighter
+  //border-top: 1px solid @grayLighter;
+  border:none;
 }
 .page .liste-items .item:last-child {border-bottom: none;}
 
@@ -262,7 +345,7 @@ input[type="color"],
 }
 
 .aside .menu-conteneur.nav > ul > li > ul > li > a,.menu-conteneur.nav > ul > li > ul > li > span{
-  font-family:'century_gothicregular';
+  font-family:'century_gothic';
   color:@black;
   font-size:1.3em;
   line-height:1.2em;
@@ -339,7 +422,7 @@ input[type="color"],
     color:@black;
     background-color:@bodyBackground;
     background-image:none;
-    z-index:10000;
+    z-index:100;
   }
 }
 
@@ -379,12 +462,98 @@ input[type="color"],
   font-size:inherit;
 }
 
+.menu_membres{
+  text-align:center;
+  font-size:1.2em;
+  margin:1em 0;
+}
+
+.page_organigramme .menu_membres{
+  text-align:left;
+}
+.page_organigramme .maincontainer{
+  padding:174px 00px 10px;
+}
+
+.page_organigramme #wrapper{
+  width:auto;
+}
+
+.page_organigramme .row_autres{
+  margin-top:1em;
+  overflow:auto;
+  text-align:center;
+  padding:0 5%;
+}
+
+.page_organigramme .row_autres h3{
+  text-align:center;
+}
+
+.page_organigramme .row_autres .autres{
+  width:33%;
+  float:left;
+}
+
+.organigramme_main{
+  border:2px solid #ccc;
+  .border-radius(20px);
+  padding-top:2em;
+}
+
+.organigramme_main .articles{
+  text-align:center;
+  margin:1em 0;
+}
+
+.organigramme_main .center{text-align:center;}
+.organigramme_main h2.ellipse{
+  width:260px;
+  background:#fff;
+  margin:-1.5em auto 2em auto;
+  position:absolute;
+  top:-1em;
+  left:80px;
+}
+.organigramme_main .modernite h2.ellipse{
+  top:-2em;
+}
+.organigramme_main h2.ellipse .ovale{
+  border-radius:130px/19px;
+  -moz-border-radius:130px/19px;
+  width:260px;
+}
+.organigramme_main h2.ellipse .titre{
+  max-width:260px;
+}
 .fonctions{
   margin-bottom:2em;
   padding-bottom:.5em;
   border-bottom:1px solid @gray;
 }
 
+.fonction_orga_top{
+  clear:both;
+  margin-bottom:1em;
+  text-align:center;
+}
+
+.fonctions_orga{
+  position:relative;
+}
+.fonctions_orga h2{
+  margin-bottom:0.4em;
+}
+
+.fonctions_orga h2.ellipse{
+  
+}
+
+.fonctions_orga .chercheurs_cnrs,.fonctions_orga .enseignants_chercheurs{
+  text-align:left;
+  width:50%;
+  float:left;
+}
 .vevent .entry-title{
   font-size:1.2em;
   margin-bottom :5px;
@@ -407,6 +576,9 @@ abbr.dtstart,abbr.dtend{
   #layoutgala33 > .core(8,4,4,@gridColumnWidth1200,@gridGutterWidth1200);
   .article_seminaire,.article_evenement {
     #layoutgala10 > .core(5,3,3,@gridColumnWidth1200,@gridGutterWidth1200);
+  }
+  .page_organigramme {
+    #layoutgala40 > .core(12,6,6,@gridColumnWidth1200,@gridGutterWidth1200);
   }
   .maincontainer{
     background:@white url(img/bandeau_nb.png) no-repeat 0 0;
@@ -439,11 +611,30 @@ abbr.dtstart,abbr.dtend{
   .article_seminaire,.article_evenement {
     #layoutgala40 > .core(6,4,4,@gridColumnWidth768,@gridGutterWidth768);
   }
-  .article_seminaire,.article_evenement {
+  .article_seminaire,.article_evenement,.page_organigramme {
     div#content{
       width:100%;
     }
+    
     div#aside,div#extra{width:48%;margin:0px;}
+  }
+  
+  .page_organigramme .content{
+      padding:0 2%;
+    }
+  .organigramme_main{
+    margin-top:3em;
+  }
+  .organigramme_main h2.ellipse{
+    left:20px;
+  }
+  .page_organigramme .fonctions_orga{
+    clear:both;
+    padding:0 2%;
+  }
+  
+  .page_organigramme .fonctions_orga.modernite{
+    margin-top:8em;
   }
   .accueil{
     margin-top:100px;

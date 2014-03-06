@@ -1,6 +1,6 @@
 /* Gothic */
 @font-face {
-    font-family: 'century_gothicregular';
+    font-family: 'century_gothic';
     src: url('fonts/gothic-webfont.eot');
     src: url('fonts/gothic-webfont.eot?#iefix') format('embedded-opentype'),
          url('fonts/gothic-webfont.woff') format('woff'),
@@ -11,9 +11,11 @@
 }
 
 @font-face {
-	font-family: 'century_gothicbold';
+	font-family: 'century_gothic';
 	src: url('fonts/gothic-bold.eot?') format('eot'), 
 	     url('fonts/gothic-bold.woff') format('woff'), 
 	     url('fonts/gothic-bold.ttf')  format('truetype'),
 	     url('fonts/gothic-bold.svg#CenturyGothic-Bold') format('svg');
+	    font-weight: bold;
+	    font-style: normal;
 }
