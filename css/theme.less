@@ -508,12 +508,23 @@ input[type="color"],
 
 .organigramme_main .center{text-align:center;}
 .organigramme_main h2.ellipse{
-  width:260px;
+  width:230px;
   background:#fff;
   margin:-1.5em auto 2em auto;
   position:absolute;
   top:-1em;
-  left:80px;
+  left:40px;
+}
+
+.organigramme_main .arias h2.ellipse .ovale{
+  width:230px;
+  border-radius:115px/17px;
+  -moz-border-radius:115px/17px;
+}
+.organigramme_main .modernite h2.ellipse{
+  left:auto;
+  width:260px;
+  right:40px;
 }
 .organigramme_main .modernite h2.ellipse{
   top:-2em;
@@ -554,6 +565,16 @@ input[type="color"],
   width:50%;
   float:left;
 }
+
+.fonctions_orga .doctorants{
+  width:50%;
+  margin:0 25%;
+  clear:both;
+}
+
+.fonctions_orga .doctorants h3,.fonctions_orga .doctorants_modernite h3{
+  text-transform: uppercase;
+}
 .vevent .entry-title{
   font-size:1.2em;
   margin-bottom :5px;
@@ -573,6 +594,14 @@ abbr.dtstart,abbr.dtend{
   border-bottom:none;
 }
 @media (min-width: 1200px) {
+  .organigramme_main h2.ellipse{
+    width:260px;
+    background:#fff;
+    margin:-1.5em auto 2em auto;
+    position:absolute;
+    top:-1em;
+    left:80px;
+  }
   #layoutgala33 > .core(8,4,4,@gridColumnWidth1200,@gridGutterWidth1200);
   .article_seminaire,.article_evenement {
     #layoutgala10 > .core(5,3,3,@gridColumnWidth1200,@gridGutterWidth1200);
@@ -625,8 +654,11 @@ abbr.dtstart,abbr.dtend{
   .organigramme_main{
     margin-top:3em;
   }
-  .organigramme_main h2.ellipse{
-    left:20px;
+  .organigramme_main h2.ellipse,.organigramme_main .modernite h2.ellipse{
+    position:relative;
+    left:initial;
+    right:initial;
+    margin:-1.5em auto 1em auto
   }
   .page_organigramme .fonctions_orga{
     clear:both;
