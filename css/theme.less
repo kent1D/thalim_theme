@@ -59,6 +59,9 @@ h1.ellipse span.titre,h2.ellipse span.titre, h3.ellipse span.titre{
   margin-right:-16px;
 }
 
+.page_auteur .cartouche .spip_logos,.page_auteur_email .cartouche .spip_logos{
+  margin-right:0;
+}
 .chapo {
   font-weight:normal;
   font-size:1.2em;
@@ -112,16 +115,18 @@ h1.ellipse span.titre,h2.ellipse span.titre, h3.ellipse span.titre{
   filter:none;
 }
 .pagination a,.main .pagination a, .markItUp .markItUpHeader a, .markItUp .markItUpTabs a, .markItUp .markItUpFooter a,
-.formulaire_spip a,a.lien_document,.main .pagination a:hover, .markItUp .markItUpHeader a:hover, .markItUp .markItUpTabs a, .markItUp .markItUpFooter a:hover,
-.formulaire_spip a:hover,a.lien_document:hover{
+.formulaire_spip a,a.lien_document,a.lien_important,.main .pagination a:hover, .markItUp .markItUpHeader a:hover, .markItUp .markItUpTabs a, .markItUp .markItUpFooter a:hover,
+.formulaire_spip a:hover,a.lien_document:hover,a.lien_important:hover,.lien_agenda,.lien_agenda:hover{
   background:initial;
   filter:none;
 }
 
-a.lien_document,a.lien_document:hover{
+a.lien_document,a.lien_document:hover,a.lien_important,a.lien_important:hover{
   padding-right:12px;
   background:transparent url(img/puce.gif) no-repeat right center;
 }
+
+.agenda_lien{text-align:center;}
 #extra{
   padding:0 2em;
 }
@@ -161,6 +166,7 @@ a.lien_document,a.lien_document:hover{
 
 .axes_transversaux{
   margin-bottom:2em;
+  clear:both;
 }
 
 .axes_transversaux .col2,.axes_transversaux .col1{
@@ -679,7 +685,9 @@ abbr.dtstart,abbr.dtend{
 }
 
 @media (max-width: 767px) {
-  #layoutgala40 > .core(6,4,4,@gridColumnWidth768,@gridGutterWidth768);
+  #layoutgala33 > .core(6,4,4,@gridColumnWidth768,@gridGutterWidth768);
+  #wrapper{width:inherit;float:left;}
+  #aside{margin-top:0;}
   .article_seminaire,.article_evenement {
     #layoutgala40 > .core(6,4,4,@gridColumnWidth768,@gridGutterWidth768);
   }
@@ -735,7 +743,7 @@ abbr.dtstart,abbr.dtend{
      margin-top:100px;
    }
 }
-@media (max-width: 450px) {
+@media (max-width: 655px) {
   #layoutgala40 > .core(6,4,4,@gridColumnWidth768,@gridGutterWidth768);
   .article_seminaire,.article_evenement {
     #layoutgala40 > .core(6,4,4,@gridColumnWidth768,@gridGutterWidth768);
