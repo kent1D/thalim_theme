@@ -25,11 +25,13 @@ h2, .h2{
   border-bottom:1px solid #ccc;
   padding-bottom:.8em;
 }
+
 h1.ellipse,h2.ellipse,h3.ellipse{
   position:relative;
   margin-bottom:1.8em;
   line-height:1.1em;
   padding-bottom:.5em;
+  border:0;
 }
 
 h1 .ovale,h2 .ovale,h3 .ovale{
@@ -43,7 +45,7 @@ h1 .ovale,h2 .ovale,h3 .ovale{
   -ms-transform: rotate(-3deg); /* IE 9 */
   -webkit-transform: rotate(-3deg); /* Safari and Chrome */
   left:0;
-  bottom:-10px;
+  bottom:0px;
   z-index:10;
 }
 
@@ -117,7 +119,7 @@ h1.ellipse span.titre,h2.ellipse span.titre, h3.ellipse span.titre{
 .pagination a,.main .pagination a, .markItUp .markItUpHeader a, .markItUp .markItUpTabs a, .markItUp .markItUpFooter a,
 .formulaire_spip a,a.lien_document,a.lien_important,.main .pagination a:hover, .markItUp .markItUpHeader a:hover, .markItUp .markItUpTabs a, .markItUp .markItUpFooter a:hover,
 .formulaire_spip a:hover,a.lien_document:hover,a.lien_important:hover,.lien_agenda,.lien_agenda:hover{
-  background:initial;
+  background:none;
   filter:none;
 }
 
@@ -451,6 +453,23 @@ input[type="color"],
   }
 }
 
+.page_agenda{
+  #content{
+    h3{
+      border-bottom:1px solid @gray;
+      padding-bottom:0.625em;
+    }
+  }
+}
+
+.page_auteur{
+  #content{
+    h2{
+      border-bottom:1px solid @gray;
+      padding-bottom:0.625em;
+    }
+  }
+}
 .footer{
   border:none;
   margin-top:0em;
@@ -505,88 +524,25 @@ input[type="color"],
 .pagination ul > li:first-child > a, .pagination ul > li:first-child > span{
   border-left:none;
 }
-.pagination ul > li > a, .pagination ul > li > span{
+.wrapper .pagination ul > li > a,.pagination ul > li > a, .pagination ul > li > span{
   line-height:20px;
   padding:0px 4px;
   font-size:inherit;
   border:none;
 }
-
+.wrapper .pagination ul > li > a:hover,.pagination ul > li > a:hover{
+  background:none;
+}
 .menu_membres{
   text-align:center;
   font-size:1.2em;
   margin:1em 0;
 }
 
-.page_organigramme .menu_membres{
-  text-align:left;
-}
-.page_organigramme .maincontainer{
-  padding:174px 00px 10px;
+.menu_membres a{
+  margin-right:1em;
 }
 
-.page_organigramme #wrapper{
-  width:auto;
-}
-
-.page_organigramme .row_autres{
-  margin-top:1em;
-  overflow:auto;
-  text-align:center;
-  padding:0 5%;
-}
-
-.page_organigramme .row_autres h3{
-  text-align:center;
-}
-
-.page_organigramme .row_autres .autres{
-  width:33%;
-  float:left;
-}
-
-.organigramme_main{
-  border:2px solid #ccc;
-  .border-radius(20px);
-  padding-top:2em;
-}
-
-.organigramme_main .articles{
-  text-align:center;
-  margin:1em 0;
-}
-
-.organigramme_main .center{text-align:center;}
-.organigramme_main h2.ellipse{
-  width:230px;
-  background:#fff;
-  margin:-1.5em auto 2em auto;
-  position:absolute;
-  top:-1em;
-  left:40px;
-}
-
-.organigramme_main .arias h2.ellipse .ovale{
-  width:230px;
-  border-radius:115px/17px;
-  -moz-border-radius:115px/17px;
-}
-.organigramme_main .modernite h2.ellipse{
-  left:auto;
-  width:260px;
-  right:40px;
-}
-.organigramme_main .modernite h2.ellipse{
-  top:-2em;
-}
-.organigramme_main h2.ellipse .ovale{
-  border-radius:130px/19px;
-  -moz-border-radius:130px/19px;
-  width:260px;
-}
-.organigramme_main h2.ellipse .titre{
-  max-width:260px;
-}
 .fonctions{
   margin-bottom:2em;
   padding-bottom:.5em;
