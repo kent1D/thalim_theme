@@ -49,6 +49,12 @@ h1 .ovale,h2 .ovale,h3 .ovale{
   z-index:10;
 }
 
+.ie8 h1 .ovale, .ie8 h2 .ovale, .ie8 h3.ovale{
+  border:none;
+  background:transparent url('img/ellipse.png') no-repeat center center;
+  height:35px;
+  width:202px;
+}
 h1.ellipse span.titre,h2.ellipse span.titre, h3.ellipse span.titre{
   z-index:20;
   display:block;
@@ -129,6 +135,10 @@ a.lien_document,a.lien_document:hover,a.lien_important,a.lien_important:hover{
 }
 
 .agenda_lien{margin:0 0 3em 45px}
+
+.lien_agenda img{
+  max-width:140px;
+}
 #extra{
   padding:0 2em;
 }
@@ -423,7 +433,7 @@ input[type="color"],
     background: -o-linear-gradient(left, @white 0%,@bodyBackground 100%); /* Opera 11.10+ */
     background: -ms-linear-gradient(left, @white 0%,@bodyBackground 100%); /* IE10+ */
     background: linear-gradient(to right,@white 0%,@bodyBackground 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@white', endColorstr='@bodyBackground',GradientType=1 ); /* IE6-9 */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
     color:@black;
     -webkit-border-radius : 10px;
     -moz-border-radius : 10px;
@@ -453,6 +463,14 @@ input[type="color"],
   }
 }
 
+.ie8 .header{
+  .form-search .btn{
+    background:transparent url('img/button_search.png') no-repeat center center;
+    border:none;
+    width:30px;
+    height:28px;
+   }
+}
 .page_agenda{
   #content{
     h3{
@@ -525,10 +543,7 @@ input[type="color"],
   border-left:none;
 }
 .wrapper .pagination ul > li > a,.pagination ul > li > a, .pagination ul > li > span{
-  line-height:20px;
-  padding:0px 4px;
-  font-size:inherit;
-  border:none;
+  background:none;
 }
 .wrapper .pagination ul > li > a:hover,.pagination ul > li > a:hover{
   background:none;
