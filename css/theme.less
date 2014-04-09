@@ -79,22 +79,22 @@ h1.ellipse span.titre,h2.ellipse span.titre, h3.ellipse span.titre{
 .wrapper a,.extra a{
   color:@black;
   background: @bodyBackground; /* Chrome,Safari4+ */ /* Chrome10+,Safari5.1+ */ /* Opera 11.10+ */ /* IE10+ */
-  background: -webkit-linear-gradient(to right, #ffffff 0%, #ffffff 2%, @bodyBackground 50%, #ffffff 100%);
-  background: -moz-linear-gradient(to right, #ffffff 0%, #ffffff 2%, @bodyBackground 50%, #ffffff 100%);
-  background: -o-linear-gradient(to right, #ffffff 0%, #ffffff 2%, @bodyBackground 50%, #ffffff 100%);
-  background: -webkit-gradient(linear, 100% 0, 0 0, from(#ffffff), color-stop(0.02, #ffffff), color-stop(0.50, @bodyBackground), to(#ffffff));
-  background: linear-gradient(to right, #ffffff 0%, #ffffff 2%, @bodyBackground 50%, #ffffff 100%); /* W3C */
+  background: -webkit-linear-gradient(to right, transparent 0%, transparent 2%, @bodyBackground 50%, transparent 100%);
+  background: -moz-linear-gradient(to right, transparent 0%, transparent 2%, @bodyBackground 50%, transparent 100%);
+  background: -o-linear-gradient(to right, transparent 0%, transparent 2%, @bodyBackground 50%, transparent 100%);
+  background: -webkit-gradient(linear, 100% 0, 0 0, from(transparent), color-stop(0.02, transparent), color-stop(0.50, @bodyBackground), to(transparent));
+  background: linear-gradient(to right, transparent 0%, transparent 2%, @bodyBackground 50%, transparent 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
 }
 
 .wrapper a:hover,.extra a:hover{
   color:@black;
   background: #fff99e; /* Chrome,Safari4+ */ /* Chrome10+,Safari5.1+ */ /* Opera 11.10+ */ /* IE10+ */
-  background: -webkit-linear-gradient(to right, #ffffff 0%, #ffffff 2%, #fff99e 50%, #ffffff 100%);
-  background: -moz-linear-gradient(to right, #ffffff 0%, #ffffff 2%, #fff99e 50%, #ffffff 100%);
-  background: -o-linear-gradient(to right, #ffffff 0%, #ffffff 2%, #fff99e 50%, #ffffff 100%);
-  background: -webkit-gradient(linear, 100% 0, 0 0, from(#ffffff), color-stop(0.02, #ffffff), color-stop(0.50, #fff99e), to(#ffffff));
-  background: linear-gradient(to right, #ffffff 0%, #ffffff 2%, #fff99e 50%, #ffffff 100%); /* W3C */
+  background: -webkit-linear-gradient(to right, transparent 0%, transparent 2%, #fff99e 50%, transparent 100%);
+  background: -moz-linear-gradient(to right, transparent 0%, transparent 2%, #fff99e 50%, transparent 100%);
+  background: -o-linear-gradient(to right, transparent 0%, transparent 2%, #fff99e 50%, transparent 100%);
+  background: -webkit-gradient(linear, 100% 0, 0 0, from(transparent), color-stop(0.02, transparent), color-stop(0.50, #fff99e), to(transparent));
+  background: linear-gradient(to right, transparent 0%, transparent 2%, #fff99e 50%, transparent 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
 }
 
@@ -316,6 +316,9 @@ h3.legend{
     font-weight:normal;
   }
 }
+form input.text,form textarea,.markItUp .markItUpContainer .markItUpHeader{
+  width:98%;
+}
 .formulaire_spip{
   legend,label,em.attention,h3.legend{
     color:@white;
@@ -375,6 +378,9 @@ input[type="color"],
   }
 }
 
+input[type="file"]{
+  color:#fff;
+}
 .thesaurus{
   text-align:justify;
   margin-bottom:2em;
@@ -633,6 +639,12 @@ input[type="color"],
 
 abbr.dtstart,abbr.dtend{
   border-bottom:none;
+}
+
+.error .inner {
+  color:#fff;
+  background-color:transparent;
+  border:none;
 }
 @media (min-width: 1200px) {
   .organigramme_main h2.ellipse{
