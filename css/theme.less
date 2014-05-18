@@ -15,10 +15,12 @@ strong,h4{
   font-weight:bold;
 }
 
+.main p{
+  text-align:justify;
+}
 h2, .h2{
   font-size:1.7em;
 }
-
 .page_article h1{
   margin-bottom:1.8em;
   line-height:1.1em;
@@ -79,22 +81,22 @@ h1.ellipse span.titre,h2.ellipse span.titre, h3.ellipse span.titre{
 .wrapper a,.extra a{
   color:@black;
   background: @bodyBackground; /* Chrome,Safari4+ */ /* Chrome10+,Safari5.1+ */ /* Opera 11.10+ */ /* IE10+ */
-  background: -webkit-linear-gradient(to right, transparent 0%, transparent 2%, @bodyBackground 50%, transparent 100%);
-  background: -moz-linear-gradient(to right, transparent 0%, transparent 2%, @bodyBackground 50%, transparent 100%);
-  background: -o-linear-gradient(to right, transparent 0%, transparent 2%, @bodyBackground 50%, transparent 100%);
-  background: -webkit-gradient(linear, 100% 0, 0 0, from(transparent), color-stop(0.02, transparent), color-stop(0.50, @bodyBackground), to(transparent));
-  background: linear-gradient(to right, transparent 0%, transparent 2%, @bodyBackground 50%, transparent 100%); /* W3C */
+  background: -webkit-linear-gradient(to right, #ffffff 0%, #ffffff 2%, @bodyBackground 50%, #ffffff 100%);
+  background: -moz-linear-gradient(to right, #ffffff 0%, #ffffff 2%, @bodyBackground 50%, #ffffff 100%);
+  background: -o-linear-gradient(to right, #ffffff 0%, #ffffff 2%, @bodyBackground 50%, #ffffff 100%);
+  background: -webkit-gradient(linear, 100% 0, 0 0, from(#ffffff), color-stop(0.02, #ffffff), color-stop(0.50, @bodyBackground), to(#ffffff));
+  background: linear-gradient(to right, #ffffff 0%, #ffffff 2%, @bodyBackground 50%, #ffffff 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
 }
 
 .wrapper a:hover,.extra a:hover{
   color:@black;
   background: #fff99e; /* Chrome,Safari4+ */ /* Chrome10+,Safari5.1+ */ /* Opera 11.10+ */ /* IE10+ */
-  background: -webkit-linear-gradient(to right, transparent 0%, transparent 2%, #fff99e 50%, transparent 100%);
-  background: -moz-linear-gradient(to right, transparent 0%, transparent 2%, #fff99e 50%, transparent 100%);
-  background: -o-linear-gradient(to right, transparent 0%, transparent 2%, #fff99e 50%, transparent 100%);
-  background: -webkit-gradient(linear, 100% 0, 0 0, from(transparent), color-stop(0.02, transparent), color-stop(0.50, #fff99e), to(transparent));
-  background: linear-gradient(to right, transparent 0%, transparent 2%, #fff99e 50%, transparent 100%); /* W3C */
+  background: -webkit-linear-gradient(to right, #ffffff 0%, #ffffff 2%, #fff99e 50%, #ffffff 100%);
+  background: -moz-linear-gradient(to right, #ffffff 0%, #ffffff 2%, #fff99e 50%, #ffffff 100%);
+  background: -o-linear-gradient(to right, #ffffff 0%, #ffffff 2%, #fff99e 50%, #ffffff 100%);
+  background: -webkit-gradient(linear, 100% 0, 0 0, from(#ffffff), color-stop(0.02, #ffffff), color-stop(0.50, #fff99e), to(#ffffff));
+  background: linear-gradient(to right, #ffffff 0%, #ffffff 2%, #fff99e 50%, #ffffff 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
 }
 
@@ -142,11 +144,15 @@ a.lien_document,a.lien_document:hover,a.lien_important,a.lien_important:hover{
 #extra{
   padding:0 2em;
 }
-.article_seminaire,.article_evenement {
+.article_seminaire,.article_evenements {
     #layoutgala10 > .core(5,3,3,@gridColumnWidth,@gridGutterWidth);
 }
 .evenement article{
   margin-bottom:0;
+}
+
+li .evenement ul.spip{
+  margin-left:15px;
 }
 .maincontainer{
   background:@white url(img/bandeau_nb.png) no-repeat 0 0;
@@ -252,7 +258,7 @@ a.lien_document,a.lien_document:hover,a.lien_important,a.lien_important:hover{
   -moz-box-shadow:0px 0px 5px 3px #fff99e;
   box-shadow:0px 0px 5px 3px #fff99e;
 }
-.auteurs_vignette .nom{
+.auteurs_vignette .nom,.affiche .titre{
   display:block;
   background:@black;
   position:absolute;
@@ -262,6 +268,7 @@ a.lien_document,a.lien_document:hover,a.lien_important,a.lien_important:hover{
   -moz-box-sizing:border-box;
   box-sizing:border-box;
   text-align:center;
+  color:@white
 }
 
 #aside .well{
@@ -279,7 +286,8 @@ a.lien_document,a.lien_document:hover,a.lien_important,a.lien_important:hover{
   //border-top: 1px solid @grayLighter;
   border:none;
 }
-.page .liste-items .item:last-child {border-bottom: none;}
+.page .liste-items .item:first-child {padding-top:0;}
+.page .liste-items .item:last-child {border-bottom: none;padding-bottom:0;}
 
 .liste-actualites{
   list-style-type:disc;
@@ -371,7 +379,10 @@ input[type="url"],
 input[type="search"],
 input[type="tel"],
 input[type="color"],
-.uneditable-input {
+.uneditable-input,
+button,
+a,
+.formulaire_spip a.aide {
   &:focus {
     border-color: rgba(244,233,79,.8);
     .box-shadow(~"inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(244,233,79,.6)");
@@ -438,10 +449,13 @@ input[type="file"]{
 }
 
 .header{
-  .formulaire_menu_lang{
+  .formulaire_menu_lang,#menu_lang{
     width:60%;
     float:left;
     margin-top:.5em;
+  }
+  #menu_lang{
+    margin-top:2em;
   }
   .formulaire_recherche{
     width:50%;
@@ -472,20 +486,39 @@ input[type="file"]{
     box-sizing:border-box;
   }
   label{color:@gray;margin:.5em;}
-  .form-search .btn{
+  .form-search .btn,#menu_lang a,#menu_lang strong{
     -webkit-border-radius:14px;
     -moz-border-radius:14px;
     border-radius:14px;
     margin-left:3px;
     padding:2px 3px;
     vertical-align:middle;
-    position:absolute;
-    bottom:0;
-    right:0;
     color:@black;
     background-color:@bodyBackground;
     background-image:none;
     z-index:100;
+    -webkit-box-shadow: 1px 1px 2px #111;
+    -moz-box-shadow: 1px 1px 2px #111;
+    box-shadow: 1px 1px 2px #111;
+    border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+    display:inline-block;
+    min-width:16px;
+    text-align:center;
+  }
+  #menu_lang a:hover{
+    color:@white;
+    background-color:@grayDark;
+    font-weight:normal;
+  }
+  #menu_lang strong{
+    color:@white;
+    background-color:@black;
+    font-weight:normal;
+  }
+  .form-search .btn{
+    position:absolute;
+    bottom:0;
+    right:0;
   }
 }
 
@@ -500,8 +533,10 @@ input[type="file"]{
 .page_agenda{
   #content{
     h3{
-      border-bottom:1px solid @gray;
-      padding-bottom:0.625em;
+      border-bottom:1px solid #ccc;
+      padding-bottom:0.8em;
+      font-size:1.8em;
+      line-height:1.1em;
     }
   }
 }
@@ -607,6 +642,11 @@ input[type="file"]{
   
 }
 
+h1 small, .h1 small, .h1-like small, h2 small, .h2 small, .h2-like small, h3 small, .h3 small, .h3-like small, h4 small, .h4 small, .h4-like small, h5 small, .h5 small, .h5-like small, h6 small, .h6 small, .h6-like small{
+    color:@grayDark;
+    display:block;
+    padding-top:.3em;
+}
 .fonctions_orga .chercheurs_cnrs,.fonctions_orga .enseignants_chercheurs{
   text-align:left;
   width:50%;
@@ -623,8 +663,8 @@ input[type="file"]{
   text-transform: uppercase;
 }
 .vevent .entry-title{
-  font-size:1.2em;
-  margin-bottom :5px;
+  font-size:1.1em;
+  margin :.3em 0;
 }
 
 .vevent strong time{
@@ -646,6 +686,12 @@ abbr.dtstart,abbr.dtend{
   background-color:transparent;
   border:none;
 }
+
+.page_publier {
+  .liste-items .publication, .liste-items .postmeta{
+    display:block;
+  }
+}
 @media (min-width: 1200px) {
   .organigramme_main h2.ellipse{
     width:260px;
@@ -656,7 +702,7 @@ abbr.dtstart,abbr.dtend{
     left:80px;
   }
   #layoutgala33 > .core(8,4,4,@gridColumnWidth1200,@gridGutterWidth1200);
-  .article_seminaire,.article_evenement {
+  .article_seminaire,.article_evenements {
     #layoutgala10 > .core(5,3,3,@gridColumnWidth1200,@gridGutterWidth1200);
   }
   .page_organigramme {
@@ -674,7 +720,7 @@ abbr.dtstart,abbr.dtend{
 
 @media (min-width: 768px) and (max-width: 979px) {
   #layoutgala33 > .core(8,4,4,@gridColumnWidth768,@gridGutterWidth768);
-  .article_seminaire,.article_evenement {
+  .article_seminaire,.article_evenements {
     #layoutgala35 > .core(8,4,8,@gridColumnWidth768,@gridGutterWidth768);
   }
   .container .header .spip_logos{
@@ -692,10 +738,10 @@ abbr.dtstart,abbr.dtend{
   #layoutgala33 > .core(6,4,4,@gridColumnWidth768,@gridGutterWidth768);
   #wrapper{width:inherit;float:left;}
   #aside{margin-top:0;}
-  .article_seminaire,.article_evenement {
+  .article_seminaire,.article_evenements {
     #layoutgala40 > .core(6,4,4,@gridColumnWidth768,@gridGutterWidth768);
   }
-  .article_seminaire,.article_evenement,.page_organigramme {
+  .article_seminaire,.article_evenements,.page_organigramme {
     div#content{
       width:100%;
     }
@@ -749,11 +795,11 @@ abbr.dtstart,abbr.dtend{
 }
 @media (max-width: 655px) {
   #layoutgala40 > .core(6,4,4,@gridColumnWidth768,@gridGutterWidth768);
-  .article_seminaire,.article_evenement {
+  .article_seminaire,.article_evenements {
     #layoutgala40 > .core(6,4,4,@gridColumnWidth768,@gridGutterWidth768);
   }
   
-  .article_seminaire div#aside,.article_evenement div#aside{
+  .article_seminaire div#aside,.article_evenements div#aside{
     display:none;
   }
   div#content,div#aside,div#extra{width:100%;margin:0px;}
@@ -762,7 +808,7 @@ abbr.dtstart,abbr.dtend{
     float:right;
     margin:10px;
   }
-  .article_seminaire,.article_evenement {
+  .article_seminaire,.article_evenements {
     div#content,div#aside,div#extra{float:none;width:100%;margin:0px;clear:both;}
   }
   header>.span4{
