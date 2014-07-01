@@ -21,7 +21,7 @@ strong,h4{
 h2, .h2{
   font-size:1.7em;
 }
-.page_article h1{
+.page_article h1,.page_hals_publication h1{
   margin-bottom:1.8em;
   line-height:1.1em;
   border-bottom:1px solid #ccc;
@@ -78,7 +78,7 @@ h1.ellipse span.titre,h2.ellipse span.titre, h3.ellipse span.titre{
   text-align:justify;
 }
 
-.wrapper a,.extra a{
+.wrapper a,.extra a,.evenements.seminaires .well a{
   color:@black;
   background: @bodyBackground; /* Chrome,Safari4+ */ /* Chrome10+,Safari5.1+ */ /* Opera 11.10+ */ /* IE10+ */
   background: -webkit-linear-gradient(to right, #ffffff 0%, #ffffff 2%, @bodyBackground 50%, #ffffff 100%);
@@ -89,7 +89,7 @@ h1.ellipse span.titre,h2.ellipse span.titre, h3.ellipse span.titre{
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
 }
 
-.wrapper a:hover,.extra a:hover{
+.wrapper a:hover,.extra a:hover,.evenements.seminaires .well a:hover{
   color:@black;
   background: #fff99e; /* Chrome,Safari4+ */ /* Chrome10+,Safari5.1+ */ /* Opera 11.10+ */ /* IE10+ */
   background: -webkit-linear-gradient(to right, #ffffff 0%, #ffffff 2%, #fff99e 50%, #ffffff 100%);
@@ -144,7 +144,15 @@ a.lien_document,a.lien_document:hover,a.lien_important,a.lien_important:hover{
 #extra{
   padding:0 2em;
 }
-.article_seminaire,.article_evenements {
+
+.evenements.seminaires .well{
+  background-color:transparent;
+  border:0;
+  padding:1em 0;
+  -moz-box-shadow:0px;
+  box-shadow:0px;
+}
+.article_evenements {
     #layoutgala10 > .core(5,3,3,@gridColumnWidth,@gridGutterWidth);
 }
 .evenement article{
@@ -613,10 +621,9 @@ input[type="file"]{
   text-align:center;
   font-size:1.2em;
   margin:1em 0;
-}
-
-.menu_membres a{
-  margin-right:1em;
+  a, strong{
+    margin-right:1em;
+  }
 }
 
 .fonctions{
@@ -636,10 +643,6 @@ input[type="file"]{
 }
 .fonctions_orga h2{
   margin-bottom:0.4em;
-}
-
-.fonctions_orga h2.ellipse{
-  
 }
 
 h1 small, .h1 small, .h1-like small, h2 small, .h2 small, .h2-like small, h3 small, .h3 small, .h3-like small, h4 small, .h4 small, .h4-like small, h5 small, .h5 small, .h5-like small, h6 small, .h6 small, .h6-like small{
@@ -702,7 +705,7 @@ abbr.dtstart,abbr.dtend{
     left:80px;
   }
   #layoutgala33 > .core(8,4,4,@gridColumnWidth1200,@gridGutterWidth1200);
-  .article_seminaire,.article_evenements {
+  .article_evenements {
     #layoutgala10 > .core(5,3,3,@gridColumnWidth1200,@gridGutterWidth1200);
   }
   .page_organigramme {
@@ -720,7 +723,7 @@ abbr.dtstart,abbr.dtend{
 
 @media (min-width: 768px) and (max-width: 979px) {
   #layoutgala33 > .core(8,4,4,@gridColumnWidth768,@gridGutterWidth768);
-  .article_seminaire,.article_evenements {
+  .article_evenements {
     #layoutgala35 > .core(8,4,8,@gridColumnWidth768,@gridGutterWidth768);
   }
   .container .header .spip_logos{
@@ -738,10 +741,10 @@ abbr.dtstart,abbr.dtend{
   #layoutgala33 > .core(6,4,4,@gridColumnWidth768,@gridGutterWidth768);
   #wrapper{width:inherit;float:left;}
   #aside{margin-top:0;}
-  .article_seminaire,.article_evenements {
+  .article_evenements {
     #layoutgala40 > .core(6,4,4,@gridColumnWidth768,@gridGutterWidth768);
   }
-  .article_seminaire,.article_evenements,.page_organigramme {
+  .article_evenements,.page_organigramme {
     div#content{
       width:100%;
     }
@@ -795,7 +798,7 @@ abbr.dtstart,abbr.dtend{
 }
 @media (max-width: 655px) {
   #layoutgala40 > .core(6,4,4,@gridColumnWidth768,@gridGutterWidth768);
-  .article_seminaire,.article_evenements {
+  .article_evenements {
     #layoutgala40 > .core(6,4,4,@gridColumnWidth768,@gridGutterWidth768);
   }
   
