@@ -215,7 +215,6 @@ li .evenement ul.spip{
 }
 
 .auteurs_vignette .membre,.affiche{
-  position:relative;
   width:127px;
   margin-bottom:30px;
 }
@@ -228,62 +227,51 @@ li .evenement ul.spip{
 
 .auteurs_vignette,.documents_vignette{
   width:127px;
-  margin:0 30px 40px 30px;
-}
-.auteurs_vignette .membre,.documents_vignette .affiche{
-  display:none;
-}
-
-.auteurs_vignette .membre:first-child,.documents_vignette .affiche:first-child{
-  display:block;
-}
-.auteurs_vignette .ovale,.documents_vignette .affiche .ovale{
-  width:227px;
-  height:40px;
-  border:1px solid #ccc;
-  position:absolute;
-  border-radius:113px/20px;
-  -moz-border-radius:113px/20px;
-  transform: rotate(-3deg);
-  -ms-transform: rotate(-3deg); /* IE 9 */
-  -webkit-transform: rotate(-3deg); /* Safari and Chrome */
-  left:0;
-  bottom:-18px;
-  z-index:0;
-  left:-50px;
-}
-.auteurs_vignette .membre a,.affiche a{
-  background:none;
-  filter:none;
-  display:block;
   position:relative;
-  color:#fff;
-  -webkit-box-shadow:0px 0px 5px 3px #ccc;
-  -moz-box-shadow:0px 0px 5px 3px #ccc;
-  box-shadow:0px 0px 5px 3px #ccc;
-}
-.auteurs_vignette .membre a img,.affiche a img{
-  width:100%;
-  height:auto;
-}
-.auteurs_vignette .membre a:hover,.affiche a:hover{
-  color:#fff99e;
-  -webkit-box-shadow:0px 0px 5px 3px #fff99e;
-  -moz-box-shadow:0px 0px 5px 3px #fff99e;
-  box-shadow:0px 0px 5px 3px #fff99e;
-}
-.auteurs_vignette .nom,.affiche .titre{
-  display:block;
-  background:@black;
-  position:absolute;
-  bottom:0;
-  padding:.5em;
-  width:100%;
-  -moz-box-sizing:border-box;
-  box-sizing:border-box;
-  text-align:center;
-  color:@white
-}
+  margin-bottom:4em;
+  padding-left: 30px;
+  a:hover{ 
+    img{
+      color:#fff99e;
+      -webkit-box-shadow:0px 0px 5px 3px #fff99e;
+      -moz-box-shadow:0px 0px 5px 3px #fff99e;
+      box-shadow:0px 0px 5px 3px #fff99e;
+    }
+  }
+  .ovale{
+    width:227px;
+    height:40px;
+    border:1px solid #ccc;
+    position:absolute;
+    border-radius:113px/20px;
+    -moz-border-radius:113px/20px;
+    transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg); /* IE 9 */
+    -webkit-transform: rotate(-3deg); /* Safari and Chrome */
+    left:-50px;
+    bottom:-18px;
+    z-index:-2;
+  }
+  .cycle-slideshow{
+    min-width:inherit;
+  }
+  .cycle-overlay{
+    font-family:inherit;
+    padding:.5em;
+    opacity:1;
+    text-align:center;
+  }
+  img{
+    background:none;
+    filter:none;
+    display:block;
+    position:relative;
+    color:#fff;
+    -webkit-box-shadow:0px 0px 5px 3px #ccc;
+    -moz-box-shadow:0px 0px 5px 3px #ccc;
+    box-shadow:0px 0px 5px 3px #ccc;
+  }
+} 
 
 #aside .well{
   border:none;
