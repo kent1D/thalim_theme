@@ -220,22 +220,31 @@ li .evenement ul.spip{
 }
 
 .affiche{
-  margin:0 auto 30px auto
+  margin:0 auto 30px auto;
+  a:hover{
+    img{
+      .box-shadow(0px 0px 5px 3px #fff99e);
+    }
+  }
+  img{
+      .box-shadow(0px 0px 5px 3px #ccc);
+    }
 }
 
-.main .affiche{float:left; margin:.2em 1em .2em 0;}
+.main .affiche{float:left; margin:.2em 2em .2em 0;}
 
 .auteurs_vignette,.documents_vignette{
   width:127px;
   position:relative;
   margin-bottom:4em;
   padding-left: 30px;
+  .affiche{
+    min-height:168px;
+  }
   a:hover{ 
     img{
       color:#fff99e;
-      -webkit-box-shadow:0px 0px 5px 3px #fff99e;
-      -moz-box-shadow:0px 0px 5px 3px #fff99e;
-      box-shadow:0px 0px 5px 3px #fff99e;
+      .box-shadow(0px 0px 5px 3px #fff99e);
     }
   }
   .ovale{
@@ -261,15 +270,23 @@ li .evenement ul.spip{
     opacity:1;
     text-align:center;
   }
+  a{
+    vertical-align:bottom;
+    position: absolute;
+    bottom: 0;
+    width: 127px;
+    height: auto;
+  }
   img{
+    width:100%;
+    max-height:190px;
     background:none;
     filter:none;
     display:block;
     position:relative;
     color:#fff;
-    -webkit-box-shadow:0px 0px 5px 3px #ccc;
-    -moz-box-shadow:0px 0px 5px 3px #ccc;
-    box-shadow:0px 0px 5px 3px #ccc;
+    vertical-align:bottom;
+    .box-shadow(0px 0px 5px 3px #ccc);
   }
 } 
 
