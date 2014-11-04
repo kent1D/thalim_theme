@@ -31,7 +31,7 @@ h2, .h2{
   padding-bottom:.8em;
 }
 
-h1.ellipse,h2.ellipse,h3.ellipse{
+h1.ellipse,h2.ellipse,h3.ellipse,.axes_transversaux div.ellipse {
   position:relative;
   margin-bottom:1.8em;
   line-height:1.1em;
@@ -39,7 +39,7 @@ h1.ellipse,h2.ellipse,h3.ellipse{
   border:0;
 }
 
-h1 .ovale,h2 .ovale,h3 .ovale{
+h1 .ovale,h2 .ovale,h3 .ovale,.axes_transversaux div .ovale{
   width:200px;
   height:30px;
   border:1px solid #ccc;
@@ -54,14 +54,14 @@ h1 .ovale,h2 .ovale,h3 .ovale{
   z-index:10;
 }
 
-.ie8 h1 .ovale, .ie8 h2 .ovale, .ie8 h3.ovale{
+.ie8 h1 .ovale, .ie8 h2 .ovale, .ie8 h3.ovale, .ie8 .axes_transversaux div .ovale{
   border:none;
   background:transparent url('img/ellipse.png') no-repeat center center;
   height:35px;
   width:202px;
 }
 
-h1.ellipse span.titre,h2.ellipse span.titre, h3.ellipse span.titre{
+h1.ellipse span.titre,h2.ellipse span.titre, h3.ellipse span.titre,div.ellipse h2{
   z-index:20;
   display:block;
   width:100%;
@@ -69,6 +69,15 @@ h1.ellipse span.titre,h2.ellipse span.titre, h3.ellipse span.titre{
   text-align:center;
 }
 
+div.ellipse{
+  margin-bottom: 3.6em;
+  padding-bottom: 1em;
+}
+div.ellipse h2{
+  line-height: 1.1em;
+  margin-bottom:0;
+  padding-bottom:0;
+}
 .cartouche .spip_logos,.entry-title .spip_logos{
   margin-right:-16px;
 }
@@ -124,13 +133,9 @@ h1.ellipse span.titre,h2.ellipse span.titre, h3.ellipse span.titre{
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#eeeeee',GradientType=1 ); /* IE6-9 */
 }
 
-.wrapper .actualites .span2 a{
-  background:none;
-  filter:none;
-}
-.pagination a,.main .pagination a, .markItUp .markItUpHeader a, .markItUp .markItUpTabs a, .markItUp .markItUpFooter a,
+.wrapper .actualites .span2 a,.pagination a,.main .pagination a, .markItUp .markItUpHeader a, .markItUp .markItUpTabs a, .markItUp .markItUpFooter a,
 .formulaire_spip a,a.lien_document,a.lien_important,.main .pagination a:hover, .markItUp .markItUpHeader a:hover, .markItUp .markItUpTabs a, .markItUp .markItUpFooter a:hover,
-.formulaire_spip a:hover,a.lien_document:hover,a.lien_important:hover,.lien_agenda,.lien_agenda:hover{
+.formulaire_spip a:hover,a.lien_document:hover,a.lien_important:hover,.lien_agenda,.lien_agenda:hover,.axes_transversaux a{
   background:none;
   filter:none;
 }
@@ -209,7 +214,7 @@ li .evenement ul.spip{
   margin-left:0;
 }
 
-.axes_transversaux .col1 h2.ellipse{
+.axes_transversaux .col1 div.ellipse{
   float:right;
   width:200px;
 }
