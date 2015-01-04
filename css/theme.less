@@ -772,6 +772,26 @@ li.type_publication.ouverte{
     display:block;
   }
 }
+
+.retour_haut{
+  display:none;
+  text-indent: -9999px;
+  cursor: pointer;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  a{
+    display:block;
+    width: 80px;
+    height: 80px;
+    background: url(img/fleche_hautdepage.png) no-repeat;
+    opacity:.5;
+  }
+  a:hover{
+    background: url(img/fleche_hautdepage.png) no-repeat;
+    opacity:.9;
+  }
+}
 @media (min-width: 1200px) {
   .organigramme_main h2.ellipse{
     width:260px;
