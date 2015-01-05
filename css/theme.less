@@ -73,6 +73,9 @@ h1.ellipse span.titre,h2.ellipse span.titre, h3.ellipse span.titre,div.ellipse h
   text-align:center;
 }
 
+.page_sommaire div.ellipse h2{
+  font-size:1.3em;
+}
 div.ellipse{
   margin-bottom: 3.6em;
   padding-bottom: 1em;
@@ -205,7 +208,7 @@ li .evenement ul.spip{
 #descriptif_site_spip{
   margin-top:4em;
   margin-bottom:2em;
-  font-size:1.4em;
+  font-size:1.25em;
   text-align:justify;
 }
 
@@ -608,15 +611,20 @@ input[type="file"]{
   }
 }
 
-.page_article{
-  .publications,.activites,.activites_editoriales,.programmes{
+.page_article,.page_membres{
+  .publications,.activites,.activites_editoriales,.programmes, .fonctions{
     h2{
       border-bottom:1px solid @gray;
       padding-bottom:0.625em;
     }
   }
 }
-
+.page_mot{
+  h2{
+    border-bottom:1px solid @gray;
+    padding-bottom:0.625em;
+  }
+}
 .footer{
   border:none;
   margin-top:0em;
@@ -689,7 +697,9 @@ input[type="file"]{
 .fonctions{
   margin-bottom:2em;
   padding-bottom:.5em;
-  border-bottom:1px solid @gray;
+  strong{
+    font-size:1.1em;
+  }
 }
 
 .fonction_orga_top{
