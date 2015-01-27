@@ -11,6 +11,22 @@
 
 #layoutgala33 > .core(8,4,4,@gridColumnWidth,@gridGutterWidth);
 
+body .breadcrumb{
+  background:transparent;
+  padding:8px 0;
+  color:#ADAFAE;
+  font-size:1em;
+  .on.active{
+    font-weight:normal;
+  }
+  li > a{
+    color:@black;
+  }
+}
+
+.breadcrumb > li > .divider{
+    padding:0 2px;
+}
 sup{
   top:.1em;
 }
@@ -71,6 +87,7 @@ h1.ellipse span.titre,h2.ellipse span.titre, h3.ellipse span.titre,div.ellipse h
   width:100%;
   max-width:200px;
   text-align:center;
+  position:relative;
 }
 
 .page_sommaire div.ellipse h2{
@@ -607,6 +624,9 @@ input[type="file"]{
     h2{
       border-bottom:1px solid @gray;
       padding-bottom:0.625em;
+    }
+    h3{
+      font-weight:bold;
     }
   }
 }
