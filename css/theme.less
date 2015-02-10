@@ -115,6 +115,11 @@ div.ellipse h2{
   text-align:justify;
 }
 
+.bio {
+  font-weight:normal;
+  font-size:1em;
+  text-align:justify;
+}
 .wrapper a,.extra a,.evenements.seminaires .well a{
   color:@black;
   background: @bodyBackground; /* Chrome,Safari4+ */ /* Chrome10+,Safari5.1+ */ /* Opera 11.10+ */ /* IE10+ */
@@ -215,7 +220,7 @@ li .evenement ul.spip{
 .container .header .spip_logos{
   position:absolute;
   float:none;
-  margin:70px 0 0 0;
+  margin:95px 0 0 0;
 }
 
 .accueil .span4{
@@ -822,6 +827,16 @@ li.type_publication.ouverte{
     opacity:.9;
   }
 }
+@media (min-width: 1280px) {
+  .retour_haut{
+    width:1210px;
+    right:auto;
+    a{
+      float:right;
+    }
+  }
+}
+
 @media (min-width: 1200px) {
   .organigramme_main h2.ellipse{
     width:260px;
