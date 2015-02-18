@@ -622,6 +622,23 @@ input[type="file"]{
       line-height:1.1em;
     }
   }
+  #calendar{
+    float:right;
+    margin-top:-8em;
+    h2{
+      display:none;
+    }
+    a.ui-datepicker-prev,a.ui-datepicker-next{
+      background:transparent;
+    }
+    .ui-datepicker .ui-state-default:hover{
+      background:#f4e94f;
+      color:#000;
+    }
+  }
+  .pagination{
+      clear:both;
+    }
 }
 
 .page_auteur{
@@ -684,6 +701,7 @@ input[type="file"]{
 .pagination .label{
   display:none;
 }
+
 .pagination ul{
   border:none;
 }
@@ -709,6 +727,10 @@ input[type="file"]{
 }
 .wrapper .pagination ul > li > a:hover,.pagination ul > li > a:hover{
   background:none;
+}
+
+.agenda_futur .pagination li.disabled{
+  display:none;
 }
 .menu_membres{
   text-align:center;
@@ -808,6 +830,10 @@ li.type_publication.ouverte{
   }
 }
 
+#footer{
+	z-index:10;
+}
+
 .retour_haut{
   display:none;
   text-indent: -9999px;
@@ -815,6 +841,7 @@ li.type_publication.ouverte{
   position: fixed;
   bottom: 10px;
   right: 10px;
+  z-index:2;
   a{
     display:block;
     width: 80px;
