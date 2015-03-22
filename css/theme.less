@@ -257,6 +257,9 @@ li .evenement ul.spip{
   margin-bottom:30px;
 }
 
+.extra .affiche{
+  width:127px;
+}
 .affiche{
   margin:0 auto 30px auto;
   a:hover{
@@ -283,6 +286,7 @@ li .evenement ul.spip{
     }
   }
 }
+
 .auteurs_vignette,.documents_vignette{
   width:127px;
   position:relative;
@@ -340,6 +344,22 @@ li .evenement ul.spip{
   }
 } 
 
+.extra .documents_vignette{
+  width:210px;
+  a{
+    width:210px;
+  }
+  img{
+    max-height:320px;
+  }
+  .ovale{
+    width:290px;
+    left:-40px;
+  }
+  .affiche{
+    min-height:270px;
+  }
+}
 #aside .well{
   border:none;
   background:transparent url(img/background_well.png) 25px 0 no-repeat;
@@ -672,8 +692,15 @@ input[type="file"]{
       cursor:pointer;
       line-height:0.8em;
     }
-    td,th,td.ui-state-highlight,.ui-datepicker-header{border:1px solid #ADAFAE;}
+    td,th,td.ui-state-highlight,.ui-datepicker-header{border:none;}
     .ui-datepicker-header{border-bottom:none;width:auto;}
+    .ui-state-highlight a{background-color:#f4e94f;border-color:#f4e94f;}
+    td.ui-datepicker-today a{
+      border:1px solid @black;
+      -moz-border-radius:0;
+      -webkit-border-radius:0;
+      border-radius:0;
+    }
   }
   .pagination{
       clear:both;
